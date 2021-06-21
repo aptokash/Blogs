@@ -1,3 +1,8 @@
+<!doctype  html >
+<!-- ********************************************************************************************* 
+     ***                    HOME PAGE FOR THE BLOGS                                            ***      
+     
+     ******************************************************************************************** -->
 <html>
   <body>
     
@@ -5,7 +10,7 @@
       (async () => {
         const response = await fetch('https://api.github.com/repos/aptokash/Blogs/contents/');
         const data = await response.json();
-        let htmlString = '<h2> My Blogs </h2><ul>';
+        let htmlString = '<h2> 2 My Blogs </h2><ul>';
         for (let file of data) {
           
               htmlString += `<li><a href="${file.path}">${file.name}</a></li>`;
