@@ -13,7 +13,13 @@
         let htmlString = '<h2> 2 My Blogs </h2><ul>';
         for (let file of data) {
           
-              htmlString += `<li><a href="${file.path}">${file.name}</a></li>`;
+			  fnx = `${file.name}`;
+			  fny = fnx.substr(11); 
+				
+			htmlString += "<li>" +  fnx.substr(0,10); 
+		  
+              htmlString += `<a href="${file.path}"> 			  
+			  ${fny}</a></li>`;
             
         }
         htmlString += '</ul>';
