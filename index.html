@@ -30,10 +30,12 @@
 		for (let file of data) {
     	  
 		  if ( ("index.html" != file.name) & ("ZHeader.jpg" != file.name)) {
-			  fnx = `${file.name}`;
-			  fny = fnx.substr(11); 
+			  fnx   = `${file.name}`;
+			  fnlen = fnx.length-16;
+			  fny   = fnx.substr(11, fnlen); 
+			  
 			  htmlString += "<li>" +  fnx.substr(0,10); 
-		      htmlString += `<a href="${file.path}"> ${fny}</a></li>`;
+		      htmlString += `<a href="${file.path}"> <em> ${fny} </em></a></li>`;
            }
          }
         
